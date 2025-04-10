@@ -49,6 +49,7 @@ az acr create -n $ACR -g $GROUP --sku Standard
 # create a cluster
 $AKS_ID = az aks create -n $CLUSTER -g $GROUP `
     -c 3 `
+    -k 1.31.7 `
     --vnet-subnet-id $AKS_SUBNET_ID `
     --service-cidr 172.16.1.0/24 `
     --pod-cidr 10.0.0.0/8 `
