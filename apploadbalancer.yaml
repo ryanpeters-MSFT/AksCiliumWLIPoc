@@ -1,0 +1,9 @@
+# creates app gateway for containers resource and association
+apiVersion: alb.networking.azure.io/v1
+kind: ApplicationLoadBalancer
+metadata:
+  name: alb-test
+  namespace: alb
+spec:
+  associations:
+  - /subscriptions/24ef1668-95f3-4c77-adf2-2d023271a3e1/resourceGroups/rg-aks-ob-poc-0634/providers/Microsoft.Network/virtualNetworks/vnet/subnets/alb
