@@ -81,6 +81,12 @@ do {
     }
 } while ($state -ne 'Succeeded')
 
+# taint the system node pool
+az aks nodepool update -n nodepool1 `
+    --cluster-name $CLUSTER `
+    -g $GROUP `
+    --node-taints CriticalAddonsOnly=true:NoSchedule
+
 # add user node pool
 az aks nodepool add -g $GROUP --cluster-name $CLUSTER `
     --name appspool `
