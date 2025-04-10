@@ -1,4 +1,4 @@
-# AKS Purpose-Built Implementation
+# AKS w/ Cilium Purpose-Built Implementation
 
 *This is a purpose-built implementation of AKS with specific features to satisfy a set of requirements, highlighting various new features that support best practices in security, performance, and observability.*
 
